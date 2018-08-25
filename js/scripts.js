@@ -3,8 +3,6 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
   // this.price;
 };
-// var pizzaSize = {"medium":10, "large":10, "family":10};
-// var pizzaTopping = {"olives":1, "mushrooms":1, "onion":1};
 //to determine the pizza prices
 Pizza.prototype.price = function(){
 var price = 10;
