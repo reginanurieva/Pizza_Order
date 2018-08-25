@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery-3.3.1.js"></script>
+      <script src="js/scripts.js"></script>
+    <title>Pizza Order</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Regina's Pizza</h1>
+        <p class="lead">Yummmmm....</p>
+      </div>
+    </div>
+  <!-- ======= Pizza Order Size ====== -->
+    <div class="container">
+      <form id="order">
+  <div class="form-group">
+    <div class="row">
+      <div>
+        <h3>PIZZA | Sizes</h3>
+      </div>
+    </div>
+    <div class="row">
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="Medium" checked>
+            Medium
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="Large"checked>
+            Large
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="Family" checked>
+            Family
+          </label>
+        </div>
+    </div>
+  <!-- ======= Pizza Order Toppings ====== -->
+          <div class="row">
+            <div>
+              <h3>PIZZA | Toppings</h3>
+            </div>
+            <h4>We looooove cheese! And we know, You love cheese too! That's why all Regina's Pizzas comes with a lot of cheese, so you don't have to pay more for extra, cuz Extra is already included! Wow!</h4>
+
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Pepperoni">
+              <label for="toppings-pepperoni">Pepperoni</label>
+              <img src="img/pep.jpg" alt="pepperoni" class="img-responsive thumbnail">
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Steak">
+              <label for="toppings-steak">Steak</label>
+              <img src="img/steak1.jpg" alt="steak" class="img-responsive thumbnail">
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Bell Peppers">
+              <label for="toppings-bell-peppers">Bell Peppers</label>
+              <img src="img/bell.jpg" alt="peppers" class="img-responsive thumbnail">
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Canadian Bacon">
+              <label for="toppings-canadian-bacon">Canadian Bacon</label>
+              <img src="img/can.jpeg" alt="Canadian Bacon" class="img-responsive thumbnail">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Pineapple">
+              <label for="toppings-pineapple">Pineapple</label>
+              <img src="img/pinaple.jpg" alt="pineapple" class="img-responsive thumbnail">
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Spinach">
+              <label for="toppings-spinach">Spinach</label>
+              <img src="img/spinach.jpg" alt="spinach" class="img-responsive thumbnail">
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Mushrooms">
+              <label for="toppings-mushrooms">Mushrooms</label>
+              <img src="img/mash.jpeg" alt="mushrooms" class="img-responsive thumbnail">
+            </div>
+            <div class="col-md-3">
+              <input type="checkbox" name="toppings" value="Onion">
+              <label for="toppings-onion">Onion</label>
+              <img src="img/oni.jpeg" alt="photo of onion" class="img-responsive thumbnail">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success" id="submitBtn">
+          P L A C E &nbsp; O R D E R
+        </button>
+        <h3>Order Detail</h3>
+        <p>Pizza Size:</p>
+        <div id="pizza-size"></div>
+        <p>Pizza Ingredients:</p>
+        <div id="pizza-ingredients"></div>
+        <p>Order Total:</p>
+        <h2>$ <h2>
+        <div id="pizza-total"></div>
+      </form>
+  <!-- Pizza Order Output -->
+      <!-- <div class="row">
+        <div id="pizza-order-output">
+          <ul id="pizza-order-list">
+          </ul>
+        </div>
+      </div> -->
+  <!-- ======= Pizza Order Detail ====== -->
+      <!-- <div class="row"> -->
+        <!-- <div id="pizza-order-detail"> -->
+
+
+        <!-- </div> -->
+      <!-- </div> -->
+    </div>
+  </body>
+</html>
