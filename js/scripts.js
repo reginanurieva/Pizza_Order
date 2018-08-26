@@ -1,60 +1,44 @@
-function Pizza(size, toppings) {
+var price = 0;
+
+function Pizza(size,toppings,price) {
   this.size = size;
   this.toppings = toppings;
-  // this.price;
-};
-// var pizzaSize = {"medium":10, "large":10, "family":10};
-// var pizzaTopping = {"olives":1, "mushrooms":1, "onion":1};
-//to determine the pizza prices
-Pizza.prototype.price = function(){
-var price = 10;
+  this.price = 0;
+}
 
-  if(this.size === "Family"){
-    price +=3;
-  } else if (this.size === "Large"){
-    price +=2;
-  } else {
-    price +=1;
-  }
-// }
-//toppings price
-if (this.toppings===1){
-  price +=1;
-} else{
-  price += 0;
+var sizePrice = {"Medium":10,"Large":12,"Family":14}
+var toppingsPrice = {"Pepperoni":1,"Steak":1,"Bell Peppers":1,"Canadian Bacon":1,"Pineapple":1,"Spinach":1,"Mushrooms":1,"Onion":1}
+
+Pizza.prototype.getPrice = function() {
+  var totalForToppings = 0;
+  this.toppings.forEach(function(element) {
+    totalForToppings += toppingsPrice[element];
+  });
+
+  this.price = (sizePrice[this.size] + totalForToppings);
+  return this.price;
 }
- //return price;
- alert("bjh")
-}
+
+//user logic
 
 $(document).ready(function() {
-  $("form#order").submit(function(event){
-    $("#pizza-size").text("code");
-    //$("#pizza-size").text("Before prevent");
-  // event.PreventDefault();
-  // $("#pizza-size").text("code in the form");
-  // alert("tj");
+  // var newOrder = new Order();
+    $("form#order").submit(function(event) {
+    event.preventDefault();
 
+    var size = $("input[type=radio][name=size]:checked").val();
+    var toppings = [];
+    $("input[type=checkbox][name=toppings]:checked").each(function() {
+      toppings.push($(this).val());
+    });
+
+    var newPizza = new Pizza(size,toppings,price);
+    newPizza.getPrice();
+
+    $("#response").append("<li>" + "Pizza: " + newPizza.size + "; Toppings: " + newPizza.toppings +"."+ " Your total price is: " + newPizza.price + " dollars"+"</li>");
+
+  });
+  $("#submitOrder").click(function(){
+    alert("Your Order is on the way! Thank You for choosing Regina's Pizza! Please come back again!");
+  });
 });
-//
-  var pizzaSize = $("input:radio[name='size']:checked").val();
-  var newPizza = new Pizza(pizzaSize);
-  // $("#pizza-size").text("Before prevent");
-//
-//   $.each($("input[name='toppings']:checked"),function(){
-//     newPizza.toppings.push($(this).val());
-//   });
-// // console.log("#submitBtn")
- // $("button#submitBtn").click(function(){
-//   // $(".pizzaOrder").last().click(function(){
-//   // $("#pizza-order-detail").show();
-
-//   // $("#pizza-size").text(newPizza.size);
-// $("#pizza-ingredients").text(newPizza.toppings);
-//   $("#order-total").text(newPizza.price());
-//   // console.log();
-
-// });
- // });
-// debugger;
- });

@@ -1,10 +1,31 @@
 h4{
   font-weight: normal;
+  color:orange;
+  font-family: monospace;
+  padding-bottom: 5%;
+  font-size: 24px;
 }
 .jumbotron{
   background-color: #FFA500;
 }
 .lead{
   font-family: fantasy;
-  
+
 }
+ .btn-success{
+   padding: 15px 32px;
+ }
+#response{
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: underline;
+  color: orange;
+}
+
+.btn-danger{
+  padding: 15px 32px;
+}
+
+/* .alert-info{
+  color:red;
+} */
